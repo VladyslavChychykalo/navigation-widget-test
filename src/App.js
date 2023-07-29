@@ -4,32 +4,14 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
 
+import useActiveIndex from "./hooks/useActiveIndex";
 import idGenerator from "./utils/idGenerator";
 import styles from "./App.module.css";
 
 function App() {
   const [domTree, setDomTree] = useState(null);
-  const [activeIndex, setActiveIndex] = useState("");
+  const { setActiveIndex } = useActiveIndex();
   const mainWrapperRef = useRef();
-  const previousActiveIndex = useRef();
-
-  useEffect(() => {
-    if (!activeIndex) return;
-
-    if (previousActiveIndex.current) {
-      document
-        .getElementById(previousActiveIndex.current)
-        .classList.remove("gradient-animation");
-
-      document.getElementById(previousActiveIndex.current).style.color =
-        "#000000";
-    }
-
-    document.getElementById(activeIndex).classList.add("gradient-animation");
-    document.getElementById(activeIndex).style.color = "#ffffff";
-
-    previousActiveIndex.current = activeIndex;
-  }, [activeIndex]);
 
   useEffect(() => {
     const target = mainWrapperRef?.current;
