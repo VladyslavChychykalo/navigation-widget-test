@@ -26,10 +26,6 @@ const useActiveIndex = () => {
     previousActiveIndex.current = activeIndex;
   }, [activeIndex]);
 
-  // useEffect(() => {
-  //   document.getElementById(`link-${activeIndex}`).classList.add("active-link");
-  // }, [activeIndex]);
-
   return { setActiveIndex };
 };
 
