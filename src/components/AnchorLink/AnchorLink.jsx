@@ -5,8 +5,6 @@ const AnchorLink = ({ domTree, setActiveIndex }) => {
   return (
     <>
       {domTree?.map((item) => {
-        if (!item) return null;
-
         return (
           <div
             key={item.id}

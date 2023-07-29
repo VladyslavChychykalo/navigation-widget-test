@@ -17,8 +17,6 @@ const useGenerateDomTree = (mainWrapperRef) => {
           depth,
         };
 
-        if (id === "widget") return null;
-
         if (children.length)
           obj.children = addDomTree(Array.from(children), depth + 1);
         return obj;

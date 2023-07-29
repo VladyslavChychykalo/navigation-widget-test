@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { createPortal } from "react-dom";
 import Widget from "./components/Widget/Widget";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
@@ -15,7 +16,10 @@ function App() {
 
   return (
     <div id="wrapper" ref={mainWrapperRef} className={styles.appWrapper}>
-      <Widget setActiveIndex={setActiveIndex} domTree={domTree} />
+      {createPortal(
+        <Widget setActiveIndex={setActiveIndex} domTree={domTree} />,
+        document.body
+      )}
       <Header />
       <Main />
       <Footer />
