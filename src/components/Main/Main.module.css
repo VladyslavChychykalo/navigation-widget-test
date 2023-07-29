@@ -1,0 +1,27 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.mainWrapper div {
+    margin-bottom: 60px;
+}
+
+.mainWrapper1,
+.mainWrapper2 {
+  display: flex;
+  gap: 30px;
+}
+
+.mainWrapper > section {
+  flex: 1;
+}
+
+.mainWrapper2 > section {
+  flex: 2;
+}
+
+.mainWrapper2 > article {
+  flex: 1;
+}

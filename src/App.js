@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import Widget from "./components/Widget/Widget";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer";
+
 import idGenerator from "./utils/idGenerator";
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   const [domTree, setDomTree] = useState(null);
@@ -34,15 +38,11 @@ function App() {
   }, []);
 
   return (
-    <div id="wrapper" ref={mainWrapperRef} className="App">
+    <div id="wrapper" ref={mainWrapperRef} className={styles.appWrapper}>
       <Widget domTree={domTree} />
-
-      <header id="header" className="App-header">
-        <section id="section1">Test 1</section>
-        <section>Test 2</section>
-      </header>
-      <main></main>
-      <footer></footer>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }

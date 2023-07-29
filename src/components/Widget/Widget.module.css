@@ -4,9 +4,13 @@
   width: 100%;
   background-color: #282c34;
   right: 20px;
-  top: 20px;
+  top: 25px;
   padding: 20px;
   animation: 700ms show ease;
+  overflow: auto;
+  height: 100%;
+  height: -webkit-fill-available;
+  max-height: 500px;
 }
 
 .widgetWrapper > h3 {
@@ -42,8 +46,20 @@
 
 .buttonToggle {
   right: 20px;
-  top: 20px;
+  top: 25px;
   position: fixed;
+  background: transparent;
+  border: 1px solid black;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: color 500ms;
+}
+
+.buttonToggle:hover {
+  color: #00fe00;
 }
 
 @keyframes show {
