@@ -14,13 +14,21 @@ const useActiveIndex = () => {
 
       document.getElementById(previousActiveIndex.current).style.color =
         "#000000";
+      document
+        .getElementById(`link-${previousActiveIndex.current}`)
+        .classList.remove("active-link");
     }
 
+    document.getElementById(`link-${activeIndex}`).classList.add("active-link");
     document.getElementById(activeIndex).classList.add("gradient-animation");
     document.getElementById(activeIndex).style.color = "#ffffff";
 
     previousActiveIndex.current = activeIndex;
   }, [activeIndex]);
+
+  // useEffect(() => {
+  //   document.getElementById(`link-${activeIndex}`).classList.add("active-link");
+  // }, [activeIndex]);
 
   return { setActiveIndex };
 };

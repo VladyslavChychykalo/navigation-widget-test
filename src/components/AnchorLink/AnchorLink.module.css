@@ -6,5 +6,11 @@
 }
 
 .anchorLink {
+  color: #fff;
+  transition: color 500ms;
   margin-bottom: 10px;
+}
+
+.anchorLink:hover {
+  color: #00fe00;
 }

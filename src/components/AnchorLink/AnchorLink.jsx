@@ -14,6 +14,7 @@ const AnchorLink = ({ domTree, setActiveIndex }) => {
             }}
           >
             <a
+              id={`link-${item.href}`}
               onClick={() => setActiveIndex(item.href)}
               className={styles.anchorLink}
               href={`#${item.href}`}

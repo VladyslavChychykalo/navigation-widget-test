@@ -28,15 +28,6 @@
   color: #fff;
 }
 
-.widgetWrapper a {
-  color: #fff;
-  transition: color 500ms;
-}
-
-.widgetWrapper a:hover {
-  color: #00fe00;
-}
-
 .widgetWrapper > button {
   position: absolute;
   top: 15px;

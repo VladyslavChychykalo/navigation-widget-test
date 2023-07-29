@@ -102,3 +102,7 @@ article h3 {
     background-position: 0% 50%;
   }
 }
+
+.active-link {
+  color: #00fe00 !important;
+}
