@@ -5,9 +5,9 @@ const Header = () => {
     <header className={styles.headerWrapper} id="header">
       <nav id="nav">
         <ul className={styles.navList} id="navList">
-          <li id="navListItem">Home</li>
-          <li id="navListItem">About</li>
-          <li id="navListItem">Contacts</li>
+          <li id="navListItem1">Home</li>
+          <li id="navListItem2">About</li>
+          <li id="navListItem3">Contacts</li>
         </ul>
       </nav>
     </header>

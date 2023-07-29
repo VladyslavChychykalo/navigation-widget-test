@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AnchorLink.module.css";
 
-const AnchorLink = ({ domTree }) => {
+const AnchorLink = ({ domTree, setActiveIndex }) => {
   return (
     <>
       {domTree?.map((item) => {
@@ -15,11 +15,18 @@ const AnchorLink = ({ domTree }) => {
               paddingLeft: `${item?.depth * 10}px`,
             }}
           >
-            <a className={styles.anchorLink} href={`#${item.href}`}>
+            <a
+              onClick={() => setActiveIndex(item.href)}
+              className={styles.anchorLink}
+              href={`#${item.href}`}
+            >
               TagName {item?.nodeName}
             </a>
             {Array.from(item.children)?.length ? (
-              <AnchorLink domTree={Array.from(item.children)} />
+              <AnchorLink
+                setActiveIndex={setActiveIndex}
+                domTree={Array.from(item.children)}
+              />
             ) : null}
           </div>
         );

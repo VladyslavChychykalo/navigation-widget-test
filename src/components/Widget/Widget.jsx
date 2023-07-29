@@ -4,7 +4,7 @@ import useToggle from "../../hooks/useToggle";
 import { ReactComponent as CrossIcon } from "../../assets/icons/cross.svg";
 import styles from "./Widget.module.css";
 
-const Widget = ({ domTree }) => {
+const Widget = ({ domTree, setActiveIndex }) => {
   const { toggle, handleToggle } = useToggle();
 
   return (
@@ -19,7 +19,7 @@ const Widget = ({ domTree }) => {
             <CrossIcon />
           </button>
           <div>
-            <AnchorLink domTree={domTree} />
+            <AnchorLink setActiveIndex={setActiveIndex} domTree={domTree} />
           </div>
         </section>
       )}

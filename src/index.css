@@ -47,3 +47,58 @@ section h3,
 article h3 {
   margin-bottom: 20px;
 }
+
+.gradient-animation {
+  background: linear-gradient(270deg, #d9132c, #9213d9) !important;
+  background-size: 400% 400%;
+
+  -webkit-animation: gradient 4s ease infinite;
+  -moz-animation: gradient 4s ease infinite;
+  -o-animation: gradient 4s ease infinite;
+  animation: gradient 4s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
