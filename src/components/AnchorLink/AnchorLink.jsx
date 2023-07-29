@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./AnchorLink.module.css";
 
 const AnchorLink = ({ domTree }) => {
   return (
@@ -9,20 +10,12 @@ const AnchorLink = ({ domTree }) => {
         return (
           <div
             key={item.id}
+            className={styles.anchorLinkWrapper}
             style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              textAlign: "start",
               paddingLeft: `${item?.depth * 10}px`,
             }}
           >
-            <a
-              style={{
-                marginBottom: "10px",
-              }}
-              href={`#${item.href}`}
-            >
+            <a className={styles.anchorLink} href={`#${item.href}`}>
               TagName {item?.nodeName}
             </a>
             {Array.from(item.children)?.length ? (

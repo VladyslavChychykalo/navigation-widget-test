@@ -1,0 +1,10 @@
+.anchorLinkWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.anchorLink {
+  margin-bottom: 10px;
+}
